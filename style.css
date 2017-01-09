@@ -1,3 +1,34 @@
+body {
+    margin: 0 auto;
+}
+
 .column, .board {
     border: 2px solid black;
+}
+.board {
+    text-align: center;
+    background-color: orange;
+}
+.column {
+    width: 30%;
+    display: inline-block;
+    margin: 8px;
+    height: 600px;
+    text-align: left;
+    padding: 10px;
+    background-color: green;
+}
+.column .btn-delete {
+    height: 25px;
+}
+.add-card, .create-column {
+    width: 140px;
+    margin: 0px 5px;
+}
+.add-card, .create-column, .btn-delete {
+    font-size: 16px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 8px;
 }
