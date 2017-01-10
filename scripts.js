@@ -1,20 +1,23 @@
-function Telefon(marka, cena , kolor) {
+function Telefon(marka, cena, kolor, gwarancja) {
     this.marka = marka;
     this.cena = cena;
     this.kolor = kolor || "niebieski";
-}
+    this.gwarancja = cena*0.1;
+    console.log(this);
+};
+
 Telefon.prototype.printInfo = function() {
-    console.log("Marka telefonu to " + this.marka + ", kolor to " + this.kolor + ", a cena to " +this.cena + ".");
-}
+    console.log("Marka telefonu to " + this.marka + ", kolor to " + this.kolor + ", a cena to " + this.cena + ". Cena przedłużonej gwarancji to " + this.gwarancja + ".");
+};
 
-var SamsungGalaxyS6 = new Telefon("Samsung", 3200, "biały");
-SamsungGalaxyS6.printInfo();
+var samsungGalaxyS6 = new Telefon("Samsung", 3200, "biały");
+samsungGalaxyS6.printInfo();
 
-var IPhone6S = new Telefon("Apple", 2200, "czarny");
-IPhone6S.printInfo();
+var iPhone6S = new Telefon("Apple", 2200, "czarny");
+iPhone6S.printInfo();
 
-var OnePlusOne = new Telefon("One Plus", 1700, "srebrny");
-OnePlusOne.printInfo();
+var onePlusOne = new Telefon("One Plus", 1700, "srebrny");
+onePlusOne.printInfo();
 
-var SonyEricssonK800i = new Telefon ("Sony", 300);
-SonyEricssonK800i.printInfo(); 
+var sonyEricssonK800i = new Telefon ("Sony", 300);
+sonyEricssonK800i.printInfo(); 
