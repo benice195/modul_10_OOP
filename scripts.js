@@ -2,9 +2,17 @@ function Telefon(marka, cena, kolor, gwarancja) {
     this.marka = marka;
     this.cena = cena;
     this.kolor = kolor || "niebieski";
-    this.gwarancja = cena*0.1;
+    warrant();
     console.log(this);
+    function warrant() {
+        this.gwarancja = this.cena * 0.1;
+        console.log(this);
+    }
 };
+function warrant() {
+    this.gwarancja = this.cena * 0.1;
+    console.log(this);
+}
 
 Telefon.prototype.printInfo = function() {
     console.log("Marka telefonu to " + this.marka + ", kolor to " + this.kolor + ", a cena to " + this.cena + ". Cena przedłużonej gwarancji to " + this.gwarancja + ".");
