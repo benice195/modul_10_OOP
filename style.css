@@ -1,13 +1,23 @@
 body {
     margin: 0 auto;
+    height: 3000px;
 }
 
 .column, .board {
     border: 2px solid black;
+    border-radius: 10px;
 }
 .board {
     text-align: center;
-    background-color: orange;
+    background-color: cadetblue;
+    height: 100%;
+}
+.board h1 {
+    margin: 0;
+    background-color: teal;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 .column {
     width: 30%;
@@ -16,19 +26,54 @@ body {
     height: 600px;
     text-align: left;
     padding: 10px;
-    background-color: green;
+    background-color: teal;
+}
+.column h2 {
+    text-align: center;
 }
 .column .btn-delete {
     height: 25px;
+    float: right;
+    background-color: silver;
+}
+.column .btn-delete:hover {
+    background-color: slategrey;
+}
+
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 .add-card, .create-column {
     width: 140px;
     margin: 0px 5px;
+    
+}
+.add-card:hover, .create-column:hover {
+    background-color:slategrey;
 }
 .add-card, .create-column, .btn-delete {
     font-size: 16px;
-    height: 25px;
+    height: 30px;
     text-align: center;
     border: 1px solid grey;
     border-radius: 8px;
+    font-weight: bold;
+}
+
+.column-card-list {
+    min-height: 300px;
+    list-style-image: url("http://www.gtaonline.pl/images/smiles/icon_cool.gif");
+    margin-top: 40px;
+}
+.card-description {
+    font-size: 16px;
+    font-weight: bold;
+}
+.card {
+    background-color: burlywood;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    word-wrap: break-word;
 }

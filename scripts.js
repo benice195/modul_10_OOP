@@ -26,6 +26,7 @@ $(function(){
             var $columnDelete = $('<button>').addClass('btn-delete').text('x');
             var $columnAddCard = $('<button>').addClass('add-card').text('Dodaj kartę');
             
+            
             $columnDelete.click(function() {
                 self.removeColumn();
             });
@@ -38,6 +39,7 @@ $(function(){
             $column.append($columnAddCard);
             $column.append($columnCardList);
             return $column;
+            
         };
     };
 
@@ -85,6 +87,7 @@ $(function(){
             initSortable();
         },
         $element: $('#board .column-container')
+        
     };
     
     function initSortable() {
@@ -92,7 +95,7 @@ $(function(){
             connectWith: '.column-card-list',
             placeholder: 'card-placeholder'
         }).disableSelection();
-
+        
     };
     
     $('.create-column').click(function(){
